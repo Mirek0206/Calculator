@@ -14,6 +14,10 @@ class MainActivity : AppCompatActivity()
     private var secondNumber = ""
     private var operator = ""
 
+    private var resFirstNumber = ""
+    private var resSecondNumber = ""
+    private var resOperator = ""
+
     override fun onCreate(savedInstanceState: Bundle?)
     {
         super.onCreate(savedInstanceState)
@@ -48,12 +52,30 @@ class MainActivity : AppCompatActivity()
             {
                 operator = view.text.toString()
             }
+            else
+            {
+                Toast.makeText(this, "Nie można wybrać typu operacji", Toast.LENGTH_SHORT).show()
+            }
         }
-
     }
 
     fun equalsAction(view: View)
     {
+        if (firstNumber.isEmpty() && resFirstNumber.isNotEmpty())
+        {
+            firstNumber = resFirstNumber
+        }
+
+        if (secondNumber.isEmpty() && resSecondNumber.isNotEmpty())
+        {
+            secondNumber = resSecondNumber
+        }
+
+        if (operator.isEmpty() && resOperator.isNotEmpty())
+        {
+            operator = resOperator
+        }
+
         if (   secondNumber.isNotEmpty()
             && secondNumber.toDoubleOrNull() != null
             && firstNumber.isNotEmpty()
@@ -84,10 +106,15 @@ class MainActivity : AppCompatActivity()
                 }
             }
 
-            firstNumber = tmpResult.toString()
+            resultsTV.text = tmpResult.toString()
+
+            resFirstNumber = tmpResult.toString()
+            resSecondNumber = secondNumber
+            resOperator = operator
+
+            firstNumber = ""
             secondNumber = ""
             operator = ""
-            resultsTV.text = firstNumber
         }
     }
 
@@ -107,8 +134,14 @@ class MainActivity : AppCompatActivity()
             firstNumber = firstNumber.dropLast(1)
             resultsTV.text = firstNumber
         }
-
-        Toast.makeText(this, "Nie ma nic do usunięcia", Toast.LENGTH_SHORT).show()
+        else if (resFirstNumber.isNotEmpty())
+        {
+            allClearAction(view)
+        }
+        else
+        {
+            Toast.makeText(this, "Nie masz nic do usunięcia", Toast.LENGTH_SHORT).show()
+        }
     }
 
     fun allClearAction(view: View)
@@ -116,6 +149,9 @@ class MainActivity : AppCompatActivity()
         firstNumber = ""
         secondNumber = ""
         operator = ""
+        resFirstNumber = ""
+        resSecondNumber = ""
+        resOperator = ""
         resultsTV.text=""
     }
 
@@ -132,14 +168,27 @@ class MainActivity : AppCompatActivity()
         }
         else if (firstNumber.isNotEmpty())
         {
-            firstNumber = if (firstNumber.first().isDigit()) {
-                "-$firstNumber"
-            } else {
-                firstNumber.drop(1)
+            if (operator.isNotEmpty() && resFirstNumber.isNotEmpty())
+            {
+                secondNumber = if (secondNumber.first().isDigit()) {
+                    "-$secondNumber"
+                } else {
+                    secondNumber.drop(1)
+                }
+                resultsTV.text = secondNumber
             }
-            resultsTV.text = firstNumber
+            else
+            {
+                firstNumber = if (firstNumber.first().isDigit()) {
+                    "-$firstNumber"
+                } else {
+                    firstNumber.drop(1)
+                }
+                resultsTV.text = firstNumber
+            }
         }
     }
+
     fun addPointAction(view: View)
     {
         if (   secondNumber.isNotEmpty()
@@ -154,6 +203,10 @@ class MainActivity : AppCompatActivity()
         {
             firstNumber += "."
             resultsTV.text = firstNumber
+        }
+        else
+        {
+            Toast.makeText(this, "Nie można postawić kropki!", Toast.LENGTH_SHORT).show()
         }
     }
 }
