@@ -123,6 +123,9 @@ open class BaseCalcActivity : AppCompatActivity()
                 "x^y" -> {
                     tmpResult = firstNumber.toDouble().pow(secondNumber.toDouble())
                 }
+                "%" -> {
+                    tmpResult = secondNumber.toDouble() * firstNumber.toDouble() / 100.0
+                }
             }
 
             resultsTV.text = tmpResult.toString()

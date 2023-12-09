@@ -336,12 +336,27 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/space20"
-                        app:layout_constraintWidth_percent="0.44"/>
+                        app:layout_constraintWidth_percent="0.2"/>
+                <Space
+                        android:id="@+id/space99"
+                        app:layout_constraintWidth_percent="0.04"
+                        android:layout_height="match_parent"
+                        app:layout_constraintStart_toEndOf="@+id/button0"
+                        android:layout_width="0dp"/>
+                <Button
+                        style="@style/buttonOperator"
+                        android:id="@+id/percent"
+                        android:text="%"
+                        android:onClick="operationAction"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/space99"
+                        app:layout_constraintWidth_percent="0.2"/>
                 <Space
                         android:id="@+id/space21"
                         app:layout_constraintWidth_percent="0.04"
                         android:layout_height="match_parent"
-                        app:layout_constraintStart_toEndOf="@+id/button0"
+                        app:layout_constraintStart_toEndOf="@+id/percent"
                         android:layout_width="0dp"/>
                 <Button
                         style="@style/buttonSpecialOperator"
