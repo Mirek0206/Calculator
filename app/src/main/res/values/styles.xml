@@ -8,8 +8,9 @@
 
     <style name="buttonNumber">
         <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">match_parent</item>
-        <item name="android:textSize">25sp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">20sp</item>
         <item name="android:textColor">@android:color/white</item>
         <item name="backgroundTint">@color/dark_grey</item>
         <item name="shapeAppearance">@style/CircleShape</item>
@@ -18,7 +19,7 @@
     <style name="buttonOperator">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">0dp</item>
-        <item name="android:textSize">25sp</item>
+        <item name="android:textSize">20sp</item>
         <item name="android:textColor">@android:color/black</item>
         <item name="backgroundTint">@color/light_blue</item>
         <item name="shapeAppearance">@style/CircleShape</item>
@@ -28,7 +29,7 @@
     <style name="buttonSpecialOperator">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">0dp</item>
-        <item name="android:textSize">25sp</item>
+        <item name="android:textSize">20sp</item>
         <item name="android:textColor">@android:color/black</item>
         <item name="backgroundTint">@color/light_grey</item>
         <item name="shapeAppearance">@style/CircleShape</item>
