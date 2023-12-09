@@ -8,7 +8,7 @@
         android:background="@color/black"
         android:orientation="vertical"
         tools:ignore="HardcodedText"
-        tools:context=".MainActivity">
+        tools:context=".SimpleCalcActivity">
 
         <TextView
                 android:text=""

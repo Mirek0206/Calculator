@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="40dp"
+        tools:ignore="HardcodedText"
+        tools:context=".StartActivity">
+
+    <Button
+            style="@style/startButton"
+            android:id="@+id/btn_readme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:insetTop="10dp"
+            android:insetBottom="10dp"
+            android:text="Readme" />
+
+    <Button
+            style="@style/startButton"
+            android:id="@+id/btn_simple_calculator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:insetTop="10dp"
+            android:insetBottom="10dp"
+            android:text="Kalkulator prosty" />
+
+    <Button
+            style="@style/startButton"
+            android:id="@+id/btn_advanced_calculator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:insetTop="10dp"
+            android:insetBottom="10dp"
+            android:text="Kalkulator zaawansowany" />
+
+    <Button
+            style="@style/startButton"
+            android:id="@+id/btn_exit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:insetTop="10dp"
+            android:insetBottom="10dp"
+            android:text="Wyjście" />
+</LinearLayout>

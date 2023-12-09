@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:orientation="vertical"
+        android:padding="20dp"
+        tools:ignore="HardcodedText"
+        tools:context=".StartActivity">
+
+    <TextView
+            android:text="Kalkulator v1.0"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            />
+    <TextView
+            android:text="Autor: Damian Mirowski 236417"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            />
+    <TextView
+            android:text="Aplikacja zawiera kalkulator prosty, jak i zarówno zaawansowany. Wybór należy tylko do Ciebie ;)"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            />
+</LinearLayout>
